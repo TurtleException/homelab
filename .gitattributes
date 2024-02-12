@@ -1,0 +1,5 @@
+# Include markdown as detectable language
+*.md linguist-detectable
+
+# Include dotfiles as bash / shell
+dotfiles/.* linguist-language=Shell
