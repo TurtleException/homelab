@@ -6,5 +6,10 @@ This directory contains my commonly used dotfiles - including aliases, bash conf
 ### Install
 
 ```bash
-git clone -n --filter=tree:0 git@github.com:TurtleException/homelab ~/.dotfiles && ~/.dotfiles/install.sh
+git clone -n https://github.com/TurtleException/homelab.git ~/.dotfiles \
+  && cd ~/.dotfiles \
+  && git sparse-checkout init --cone \
+  && git sparse-checkout set dotfiles \
+  && git checkout \
+  && ~/.dotfiles/install.sh
 ```
